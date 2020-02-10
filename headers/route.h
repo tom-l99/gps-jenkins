@@ -114,6 +114,10 @@ namespace GPS
     protected:
       Route() {} // Only called by Track constructor.
 
+      /* Class Invariants:
+       *   - There is always at least one Position in the positions vector - it is never empty.
+       *   - The positionNames vector is always the same length as the positions vector.
+       */
       std::vector<Position> positions;
       std::vector<std::string> positionNames;
 
