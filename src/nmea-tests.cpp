@@ -201,7 +201,7 @@ std::ostream& operator<<(std::ostream& outputStream, const std::vector<std::stri
     for (auto it = vec.begin(); it != vec.end(); ++it)
     {
         if (it != vec.begin()) outputStream << ',';
-        outputStream << *it;
+        outputStream << '"' << *it << '"';
     }
     outputStream << '}';
     return outputStream;
