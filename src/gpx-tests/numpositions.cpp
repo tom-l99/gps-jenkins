@@ -30,7 +30,7 @@ const metres horizontalGridUnit = 100000;
 // The shortest possible route (a single point).
 BOOST_AUTO_TEST_CASE( singleton_route )
 {
-   Route route = Route(LogFiles::GPXRoutesDir + "Q.gpx", isFileName);
+   Route route = Route(LogFiles::GPXRoutesDir + "N0792395/Q.gpx", isFileName);
    BOOST_CHECK_EQUAL( route.numPositions(), 1 );
 }
 
