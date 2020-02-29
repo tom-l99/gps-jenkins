@@ -8,7 +8,7 @@ using namespace GPS;
 
 /*BOOST TEST DESCRIPTION*/
 
-BOOST_AUTO_TEST_SUITE( Route_steepestGradient-N0792395 )
+BOOST_AUTO_TEST_SUITE( Route_steepestGradient_N0792395 )
 
 const bool isFileName = true; // All GPX data in this suite is loaded from files.
 
