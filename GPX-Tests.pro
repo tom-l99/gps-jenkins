@@ -27,8 +27,7 @@ SOURCES += \
     src/xml/element.cpp \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
-    src/gpx-tests/numpositions.cpp \
-    src/gpx-tests/steepestgradient-n0792395.cpp
+    src/gpx-tests/numpositions.cpp
 
 INCLUDEPATH += headers/  headers/xml/
 
