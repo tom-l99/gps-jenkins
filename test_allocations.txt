@@ -1,6 +1,6 @@
 Route::totalLength() - N0809343, N0786783, N0815464, N0790170,N0834113
 Route::netLength() - N0791167
-Route::totalHeightGain() - T0120922, T0117358, N0793293, N0812990
+Route::totalHeightGain() - T0120922, T0117358, N0793293, N0812990, N0800619
 Route::netHeightGain() -
 Route::minLatitude() - N0806708, N0833029
 Route::maxLatitude() - N0798917
