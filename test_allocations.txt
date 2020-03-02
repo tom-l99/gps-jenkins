@@ -7,10 +7,10 @@ Route::maxLatitude() - N0798917, N0821510
 Route::minLongitude() -
 Route::maxLongitude() - N0770832
 Route::minElevation() -
-Route::maxElevation() - N0832882
+Route::maxElevation() - N0832882, N0792395
 Route::maxGradient() -
 Route::minGradient() -
-Route::steepestGradient() - N0792395
+Route::steepestGradient() -
 Route::operator[]() - N0813118 , N0781349
 Route::findPosition() - T0117244, T0112609
 Route::findNameOf() -
@@ -18,7 +18,7 @@ Route::timesVisited(string) -
 Route::timesVisited(Position) -
 Route::containsCycles() -
 Track::totalTime() -
-Track::travellingTime() -
+Track::travellingTime() - N0800790
 Track::restingTime() -
 Track::longestRest() -
 Track::maxSpeed() -
