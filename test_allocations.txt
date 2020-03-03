@@ -17,7 +17,7 @@ Route::findNameOf() -
 Route::timesVisited(string) - 
 Route::timesVisited(Position) -
 Route::containsCycles() -
-Track::totalTime() - N0782681
+Track::totalTime() - N0782681, N0781255
 Track::travellingTime() - N0800790
 Track::restingTime() - N0804540
 Track::longestRest() -
