@@ -28,7 +28,7 @@ SOURCES += \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
     src/gpx-tests/numpositions.cpp \
-    src/gpx-tests/steepestgradient-n0792395.cpp \
+    src/gpx-tests/maxElevation-n0792395.cpp \
     src/gpx-tests/minlatitude-n0806708.cpp
 
 INCLUDEPATH += headers/  headers/xml/
