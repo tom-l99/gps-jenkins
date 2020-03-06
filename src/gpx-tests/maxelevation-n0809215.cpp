@@ -10,7 +10,6 @@ using namespace GPS;
 BOOST_AUTO_TEST_SUITE ( Route_maxelevation_n0809215 )
 
 const bool isFileName = true;
-const std::string nNumber = "/N0809215/";
 
 //
 
