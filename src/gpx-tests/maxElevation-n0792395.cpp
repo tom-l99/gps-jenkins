@@ -17,7 +17,7 @@ const std::string NNumber = "/N0792395/"; //custom GPX data is loaded from this 
 BOOST_AUTO_TEST_CASE( single_route_point )
 {
    Route route = Route(LogFiles::GPXRoutesDir + "Q.gpx", isFileName);
-   BOOST_CHECK_THROW( route.maxElevation(), -4000 );
+   BOOST_CHECK_EQUAL( route.maxElevation(), -4000 );
 }
 
 //
