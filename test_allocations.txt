@@ -7,7 +7,7 @@ Route::maxLatitude() - N0798917, N0821510, N0799202, N0800446
 Route::minLongitude() - N0782914, N0783935, N0786072, N0784536
 Route::maxLongitude() - N0770832
 Route::minElevation() -
-Route::maxElevation() - N0832882, N0792395, N0801179, N0810103
+Route::maxElevation() - N0832882, N0792395, N0801179, N0810103,N0809215
 Route::maxGradient() -  N0744074
 Route::minGradient() - N0764763, 
 Route::steepestGradient() -
