@@ -20,6 +20,7 @@ SOURCES += \
     src/earth.cpp \
     src/gpx-tests.cpp \
     src/geometry.cpp \
+    src/gpx-tests/maxLongitude-n0804090.cpp \
     src/logs.cpp \
     src/position.cpp \
     src/route.cpp \
