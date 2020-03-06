@@ -20,6 +20,7 @@ SOURCES += \
     src/earth.cpp \
     src/gpx-tests.cpp \
     src/geometry.cpp \
+    src/gpx-tests/maxLongitude-n0804090.cpp \
     src/logs.cpp \
     src/position.cpp \
     src/route.cpp \
@@ -30,7 +31,8 @@ SOURCES += \
     src/gpx-tests/numpositions.cpp \
     src/gpx-tests/maxElevation-n0792395.cpp \
     src/gpx-tests/minlatitude-n0806708.cpp \
-    src/gpx-tests/maxelevation-n0809215.cpp
+    src/gpx-tests/maxelevation-n0809215.cpp \ 
+    src/gpx-tests/maxelevation-n0806748.cpp
 
 INCLUDEPATH += headers/  headers/xml/
 
