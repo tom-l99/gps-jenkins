@@ -30,7 +30,7 @@ SOURCES += \
     src/gpx-tests/numpositions.cpp \
     src/gpx-tests/maxElevation-n0792395.cpp \
     src/gpx-tests/minlatitude-n0806708.cpp \
-    src/gpx-tests/maxelevation-n0809215.cpp
+    src/gpx-tests/maxelevation-n0809215.cpp \
 
 INCLUDEPATH += headers/  headers/xml/
 
