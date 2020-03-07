@@ -6,14 +6,14 @@ Route::minLatitude() - N0806708, N0743900, N0832866, N0786956, N0796015
 Route::maxLatitude() - N0798917, N0821510, N0799202, N0800446, N0815571
 Route::minLongitude() - N0782914, N0783935, N0786072, N0784536, N0833029
 Route::maxLongitude() - N0770832, N0795864, N0804090, N0799125
-Route::minElevation() - N0806748
+Route::minElevation() - N0806748, N0807314
 Route::maxElevation() - N0832882, N0792395, N0801179, N0810103, N0792831, N0745071
 Route::maxGradient() -  N0744074
 Route::minGradient() - N0764763, 
 Route::steepestGradient() -
 Route::operator[]() - N0813118 , N0781349
 Route::findPosition() - T0117244, T0112609, T0121709
-Route::findNameOf() - N0813688, N0813320, N0744867, N0742446, N0807314
+Route::findNameOf() - N0813688, N0813320, N0744867, N0742446
 Route::timesVisited(string) - 
 Route::timesVisited(Position) - N0785380
 Route::containsCycles() -
