@@ -14,7 +14,8 @@ HEADERS += \
     headers/track.h \
     headers/types.h \
     headers/xml/parser.h \
-    headers/xml/element.h
+    headers/xml/element.h \
+    src/gpx-tests/maxlongitude_n0799202.h
 
 SOURCES += \
     src/earth.cpp \
@@ -27,7 +28,8 @@ SOURCES += \
     src/xml/element.cpp \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
-    src/gpx-tests/numpositions.cpp
+    src/gpx-tests/numpositions.cpp \
+    src/gpx-tests/maxlongitude_n0799202.cpp
 
 INCLUDEPATH += headers/  headers/xml/
 
