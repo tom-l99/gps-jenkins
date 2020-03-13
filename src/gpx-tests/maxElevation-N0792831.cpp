@@ -11,7 +11,10 @@ BOOST_AUTO_TEST_SUITE( maxElevation )
 
 BOOST_AUTO_TEST_CASE( oneValue )
 {
-    std::string data = "<gpx><rte><name>Onevalue</name><rtept lat="10" lon="10"><name>A</name><ele>1000</ele></rtept></rte></gpx>";
+    std::string data = "<gpx><rte><name>Onevalue</name><rtept lat='10' lon='10'><name>A</name><ele>1000</ele></rtept></rte></gpx>";
+
+
+
     metres expectedData = 1000;
 
     Route trialRoute = Route(data, false);
@@ -23,7 +26,7 @@ BOOST_AUTO_TEST_CASE( oneValue )
 
 BOOST_AUTO_TEST_CASE( multipleValues )
 {
-    std::string data = "<gpx><rte><name>MultipleValues</name><rtept lat="10" lon="10"><name>A</name><ele>100</ele></rtept><rtept lat="10" lon="10"><name>B</name><ele>1000</ele></rtept><rtept lat="10" lon="10"><name>C</name><ele>500</ele></rtept></rte></gpx>";
+    std::string data = "<gpx><rte><name>MultipleValues</name><rtept lat='10' lon='10'><name>A</name><ele>100</ele></rtept><rtept lat='10' lon='10'><name>B</name><ele>1000</ele></rtept><rtept lat='10' lon='10'><name>C</name><ele>500</ele></rtept></rte></gpx>";
 
 
     metres expectedData = 1000;
