@@ -1,5 +1,6 @@
 #include <boost/test/unit_test.hpp>
 
+#include "types.h"
 #include "route.h"
 
 using namespace GPS;
