@@ -39,10 +39,10 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 
 //Test for a large amount of positions
-//Test for duplicate positions
-//Test very large and very small altitudes
+//Test for duplicate positions(same elevation value)
+//Test very large and very small elevation
 //Negative values
-//High negative values
+//Large negative values
 
 
 BOOST_AUTO_TEST_SUITE_END()
