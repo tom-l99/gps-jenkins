@@ -55,7 +55,20 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = 573;
+
+//    Route trialRoute = Route(data, isFileName)
+
+//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+
+//}
+
+//BOOST_AUTO_TEST_CASE( duplicateMaxElevation )
+//{
+
+//    std::string data = ;
+
+//    metres expectedData = 573;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -68,7 +81,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = 2147483647;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -81,7 +94,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = 0;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -94,7 +107,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = -500;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -107,7 +120,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = -2147483647;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -120,7 +133,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = -167;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -133,7 +146,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData;
 
 //    Route trialRoute = Route(data, isFileName)
 
@@ -146,7 +159,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 //    std::string data = ;
 
-//    metres expectedData = ;
+//    metres expectedData = 573;
 
 //    Route trialRoute = Route(data, isFileName)
 
