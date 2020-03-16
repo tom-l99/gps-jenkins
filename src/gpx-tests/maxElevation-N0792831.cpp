@@ -1,5 +1,6 @@
 #include <boost/test/unit_test.hpp>
 
+#include "logs.h"
 #include "types.h"
 #include "route.h"
 
@@ -32,108 +33,105 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 
 }
 
-//BOOST_AUTO_TEST_CASE( largeAmountOfPositions )
-//{
-//    metres expectedData = 2500;
+BOOST_AUTO_TEST_CASE( largeAmountOfPositions )
+{
+    metres expectedData = 2500;
 
-//    Route trialRoute = Route(dataDir + "largeAmountOfPositions.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "largeAmountOfPositions.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( duplicateElevation )
-//{
-//    metres expectedData = 573;
+BOOST_AUTO_TEST_CASE( duplicateElevation )
+{
+    metres expectedData = 573;
 
-//    Route trialRoute = Route(dataDir + "duplicateElevation.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "duplicateElevation.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( duplicateMaxElevation )
-//{
-//    metres expectedData = 573;
+BOOST_AUTO_TEST_CASE( duplicateMaxElevation )
+{
+    metres expectedData = 573;
 
-//    Route trialRoute = Route(dataDir + "duplicateMaxElevation.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "duplicateMaxElevation.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( extremeHigh )
-//{
-//    metres expectedData = 2147483647;
+BOOST_AUTO_TEST_CASE( extremeHigh )
+{
+    metres expectedData = 2147483647;
 
-//    Route trialRoute = Route(dataDir + "extremeHigh.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "extremeHigh.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( elevation0 )
-//{
-//    metres expectedData = 0;
+BOOST_AUTO_TEST_CASE( elevation0 )
+{
+    metres expectedData = 0;
 
-//    Route trialRoute = Route(dataDir + "elevation0.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "elevation0.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( negativeValue )
-//{
-//    metres expectedData = -500;
+BOOST_AUTO_TEST_CASE( negativeValue )
+{
+    metres expectedData = -500;
 
-//    Route trialRoute = Route(dataDir + "negativeValue.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "negativeValue.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( extremeNegative )
-//{
-//    metres expectedData = -2147483647;
+BOOST_AUTO_TEST_CASE( extremeNegative )
+{
+    metres expectedData = -2147483647;
 
-//    Route trialRoute = Route(dataDir + "extremeNegative.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "extremeNegative.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( mulitpleNegative )
-//{
-//    metres expectedData = -167;
+BOOST_AUTO_TEST_CASE( mulitpleNegative )
+{
+    metres expectedData = -167;
 
-//    Route trialRoute = Route(dataDir + "multipleNegative.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "multipleNegative.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( missingElevation )
-//{
-//    metres expectedData;
+BOOST_AUTO_TEST_CASE( missingElevation )
+{
+    metres expectedData;
 
-//    Route trialRoute = Route(dataDir + "missingElevation.gpx", isFileName)
+    Route trialRoute = Route(dataDir + "missingElevation.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//}
+}
 
-//BOOST_AUTO_TEST_CASE( multipleValuesSomeMissing )
-//{
+BOOST_AUTO_TEST_CASE( multipleValuesSomeMissing )
+{
+    metres expectedData = 573;
 
-//    std::string data = ;
+    Route trialRoute = Route(dataDir + "multipleValuesSomeMissing.gpx", isFileName);
 
-//    metres expectedData = 573;
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
-//    Route trialRoute = Route(dataDir + "multipleValuesSomeMissing.gpx", isFileName)
-
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
-
-//}
+}
 
 
 
