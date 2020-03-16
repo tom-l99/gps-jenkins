@@ -5,7 +5,7 @@
 		<name> multipleElevation </name>
 		<rtept> lat="0" lon="0">	
 			<name>A</name>
-			<ele> 256 </ele>
+			<ele> 467 </ele>
 		</rtept>
 		<rtept> lat="0" lon="0">	
 			<name>B</name>
@@ -13,7 +13,7 @@
 		</rtept>
 		<rtept> lat="0" lon="0">	
 			<name>C</name>
-			<ele> 256 </ele>
+			<ele> 467 </ele>
 		</rtept>
 		<rtept> lat="0" lon="0">	
 			<name>D</name>
@@ -21,7 +21,7 @@
 		</rtept>
 		<rtept> lat="0" lon="0">	
 			<name>E</name>
-			<ele> 573 </ele>
+			<ele> 800 </ele>
 		</rtept>
 	</rte>
 </gpx>
