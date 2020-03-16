@@ -35,3 +35,24 @@ BOOST_AUTO_TEST_CASE(Tolhuin_longitude_data)
     BOOST_CHECK_EQUAL( route.maxLongitude(), "-67.190840" );
 
 }
+
+BOOST_AUTO_TEST_CASE(Possitve_edge_case)
+{
+    const std::string gpxData ="<gpx><rte><name>Pacific</name><rtept lat=\"-54.510570\" lon=\"179.999999\"></rtept></rte></gpx>";
+    Route route = Route(gpxData, isFileName);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), "179.999999" );
+}
+
+BOOST_AUTO_TEST_CASE(Negative_edge_case)
+{
+    const std::string gpxData ="<gpx><rte><name>Pacific</name><rtept lat=\"-54.510570\" lon=\"-179.999999\"></rtept></rte></gpx>";
+    Route route = Route(gpxData, isFileName);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), "179.999999" );
+}
+
+BOOST_AUTO_TEST_CASE(decimal_place_boundary_case)
+{
+    const std::string gpxData ="<gpx><rte><name>Tolhuin</name><rtept lat=\"-54.510570\" lon=\"179.999999999999999\"></rtept></rte></gpx>";
+    Route route = Route(gpxData, isFileName);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), "179.999999999999999" );
+}
