@@ -21,6 +21,7 @@ SOURCES += \
     src/gpx-tests.cpp \
     src/geometry.cpp \
     src/gpx-tests/maxLongitude-n0804090.cpp \
+    src/gpx-tests/travellingTime-N0800790.cpp \
     src/logs.cpp \
     src/position.cpp \
     src/route.cpp \
