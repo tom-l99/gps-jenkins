@@ -6,7 +6,7 @@
 
 using namespace GPS;
 
-BOOST_AUTO_TEST_SUITE ( maxElevation-N0809215 )
+BOOST_AUTO_TEST_SUITE ( maxElevation_N0809215 )
 
 const bool isFileName = true;
 std::string gpxDat = LogFiles::GPXRoutesDir + "/N0809215/";
