@@ -39,7 +39,8 @@ SOURCES += \
     src/gpx-tests/maxlatitude-n0798917.cpp \
     src/gpx-tests/maxElevation-N0792831.cpp \
     src/gpx-tests/travellingTime-N0800790.cpp \
-    src/gpx-tests/maxElevation-n0809215.cpp
+    src/gpx-tests/maxElevation-n0809215.cpp \
+    src/gpx-tests/minLongitude-n0782914.cpp
 
 INCLUDEPATH += headers/  headers/xml/
 
