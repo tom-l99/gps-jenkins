@@ -6,12 +6,11 @@
 
 using namespace GPS;
 
+
+
+BOOST_AUTO_TEST_SUITE(totalLength_n0786783)
+
 const bool isFileName = true; // All GPX data in this suite is loaded from files.
-const metres maxTotalLength = 9999999999999;
-std::string totalLengthTestDir = LogFiles::GPXRoutesDir + "/N0786783/";
-
-BOOST_AUTO_TEST_SUITE(totalLength-n0786783)
-
 
 BOOST_AUTO_TEST_CASE(Typical_Inputs_One_Digit_Number, * boost::unit_test::tolerance(0.001))
 {
@@ -98,19 +97,21 @@ BOOST_AUTO_TEST_CASE(Route_Spiral,* boost::unit_test::tolerance(0.001))
 BOOST_AUTO_TEST_CASE(Route_Goes_Back_On_Itself,* boost::unit_test::tolerance(0.001))
 {
     //use ABCB.gpx
+    Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/ABCB.gpx", isFileName);
 
 }
 
 BOOST_AUTO_TEST_CASE(Route_Goes_Every_Direction, * boost::unit_test::tolerance(0.001))
 {
     //use ABGLKF.gpx
+    Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/ABGLKF.gpx", isFileName);
 
 }
 
-BOOST_AUTO_TEST_CASE(Route_Has_Single_Point)
+BOOST_AUTO_TEST_CASE(Route_Has_Single_Point, * boost::unit_test::tolerance(0.001))
 {
     Route route = Route(LogFiles::GPXRoutesDir + "Q.gpx" , isFileName);
-    BOOST_CHECK_EQUAL(route.totalLength(), 0)
+    BOOST_CHECK_EQUAL(route.totalLength(), 0);
 
 }
 
@@ -123,13 +124,18 @@ BOOST_AUTO_TEST_CASE(Route_Has_Two_Points, * boost::unit_test::tolerance(0.001))
 BOOST_AUTO_TEST_CASE(Route_Has_Three_Points, * boost::unit_test::tolerance(0.001))
 {
     //use AGM.gpx
-
+    metres expectedResult = 121525;
+    Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/AGM.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalLength(), expectedResult);
 }
 
 
 BOOST_AUTO_TEST_CASE(Route_Has_Four_Points, * boost::unit_test::tolerance(0.001))
 {
     //use ABCB.gpx
+    metres expectedResult = 30022.5;
+    Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/ABCB.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalLength(), expectedResult);
 
 }
 
@@ -141,6 +147,8 @@ BOOST_AUTO_TEST_CASE(Route_Has_Nine_Points, * boost::unit_test::tolerance(0.001)
 
 BOOST_AUTO_TEST_CASE(Route_Has_Every_Point, * boost::unit_test::tolerance(0.001))
 {
+    //Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/Q.gpx", isFileName);
+
    //use spiral.gpx
 
 }
@@ -148,16 +156,16 @@ BOOST_AUTO_TEST_CASE(Route_Has_Every_Point, * boost::unit_test::tolerance(0.001)
 
 BOOST_AUTO_TEST_CASE(Route_Has_Two_Points_Same_Position)
 {
-    Route route = Route(totalLengthTestDir + "TwoPointRouteWithSamePositions.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.totalLength(), 0)
+    Route route = Route(LogFiles::GPXRoutesDir  + "/N0786783/Q.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalLength(), 0);
 }
 
 
 
 BOOST_AUTO_TEST_CASE(No_Route_Edge_Case)
 {
-    Route route = Route(totalLengthTestDir + "emptyRoute.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.totalLength(), 0)
+    Route route = Route(LogFiles::GPXRoutesDir + "/N0786783/emptyRoute.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalLength(), 0);
 }
 
 
