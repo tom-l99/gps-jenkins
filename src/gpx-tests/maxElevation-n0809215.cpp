@@ -36,7 +36,7 @@ BOOST_AUTO_TEST_CASE ( mutlipleValues )
 BOOST_AUTO_TEST_CASE ( multipleElevation )
 {
 
-    metres Result = 573;
+    metres Result = 800;
 
     Route routeData = Route(gpxDat + "multipleElevation.gpx", isFileName);
 
