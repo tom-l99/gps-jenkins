@@ -4,7 +4,7 @@
         <name>negativeNatExtreme</name>
         <rtept lat="0" lon="0">
             <name>A</name>
-            <ele>10916</ele>
+            <ele>-10916</ele>
         </rtept>
     </rte>
 </gpx>
