@@ -6,11 +6,16 @@
 
 using namespace GPS;
 
+//BOOST Description
+
 BOOST_AUTO_TEST_SUITE ( maxElevation_N0809215 )
 
 const bool isFileName = true;
 std::string gpxDat = LogFiles::GPXRoutesDir + "/N0809215/";
 
+//BOOST Test Cases
+
+//
 BOOST_AUTO_TEST_CASE( singleValue )
 {
     metres Result = 700;
@@ -20,7 +25,7 @@ BOOST_AUTO_TEST_CASE( singleValue )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( multipleValues )
 {
     metres Result = 700;
@@ -30,7 +35,7 @@ BOOST_AUTO_TEST_CASE( multipleValues )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( incorrectElevation )
 {
     metres Result = 400;
@@ -40,7 +45,7 @@ BOOST_AUTO_TEST_CASE( incorrectElevation )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( extremePositve )
 {
     metres Result = 99999;
@@ -50,7 +55,7 @@ BOOST_AUTO_TEST_CASE( extremePositve )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( extremeNegative )
 {
     metres Result = -99999;
@@ -60,7 +65,7 @@ BOOST_AUTO_TEST_CASE( extremeNegative )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( positiveNatExtreme )
 {
     metres Result = 8848;
@@ -70,7 +75,7 @@ BOOST_AUTO_TEST_CASE( positiveNatExtreme )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( negativeNatExtreme )
 {
     metres Result = -10916;
@@ -80,7 +85,7 @@ BOOST_AUTO_TEST_CASE( negativeNatExtreme )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( positiveElevationExtreme )
 {
     metres Result = 1.79769e+308;
@@ -90,7 +95,7 @@ BOOST_AUTO_TEST_CASE( positiveElevationExtreme )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( negativeElevationExtreme )
 {
     metres Result = -1.79769e+308;
@@ -100,7 +105,7 @@ BOOST_AUTO_TEST_CASE( negativeElevationExtreme )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( overflowPositive )
 {
     metres Result = -1.79769e+309;
@@ -110,7 +115,7 @@ BOOST_AUTO_TEST_CASE( overflowPositive )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
 
-
+//
 BOOST_AUTO_TEST_CASE( overflowNegative )
 {
     metres Result = -1.79769e+309;
