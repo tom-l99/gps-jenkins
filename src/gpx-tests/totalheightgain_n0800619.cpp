@@ -30,4 +30,11 @@ BOOST_AUTO_TEST_CASE(oneValue)
     BOOST_CHECK_EQUAL( route.totalHeightGain() , defaulTotalHeightGain);
 }
 
+BOOST_AUTO_TEST_CASE(valueJustAbovePercentageAccuracy)
+{
+    const double percentageAccuracy = 0.00001;
+    Route route = Route(LogFiles::GPXRoutesDir + "ABQ.gpx", isFileName);
+    BOOST_CHECK_CLOSE( route.totalHeightGain(), 0.00010, percentageAccuracy);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
