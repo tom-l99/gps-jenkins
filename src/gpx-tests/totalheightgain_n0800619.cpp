@@ -49,4 +49,10 @@ BOOST_AUTO_TEST_CASE(emptyElevationField)
     BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
 }
 
+BOOST_AUTO_TEST_CASE(negativeEleGivesNegDifferenceBetweenPoints)
+{
+    Route route = Route(LogFiles::GPXRoutesDir + "negDiffSumZero.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
