@@ -5,7 +5,7 @@
 
 using namespace GPS;
 
-BOOST_AUTO_TEST_SUITE(totalHeightGain_N0800619)
+/*BOOST_AUTO_TEST_SUITE(totalHeightGain_N0800619)
 
 const metres defaulTotalHeightGain = 0;
 const bool isFileName = true; // All GPX data in this suite is provided from files.
@@ -55,4 +55,4 @@ BOOST_AUTO_TEST_CASE(negativeEleGivesNegDifferenceBetweenPoints)
     BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
 }
 
-BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE_END()*/
