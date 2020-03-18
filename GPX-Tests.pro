@@ -30,7 +30,7 @@ SOURCES += \
     src/gpx-tests/numpositions.cpp \
     src/gpx-tests/minlatitude-n0806708.cpp\
     src/gpx-tests/maxLongitude-n0804090.cpp \
-    src/gpx-tests/minLongitude-N0786072.cpp \
+    #src/gpx-tests/minLongitude-N0786072.cpp \
     src/gpx-tests/travellingTime-N0800790.cpp \
     src/gpx-tests/maxElevation-n0792395.cpp \
     #src/gpx-tests/minElevation-n0806748.cpp \
