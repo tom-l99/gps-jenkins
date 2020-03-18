@@ -10,7 +10,7 @@ Route::minElevation() - N0796117, N0806748, N0737323, N0807314, N0834492, N08157
 Route::maxElevation() - N0832882, N0792395, N0801179, N0810103, N0809215, N0792831, N0745071
 Route::maxGradient() -  N0744074, N0781292
 Route::minGradient() - N0764763, 
-Route::steepestGradient() -
+Route::steepestGradient() - N0803348
 Route::operator[]() - N0813118 , N0781349
 Route::findPosition() - T0117244, T0112609, T0121709, N0785398, N0812237
 Route::findNameOf() - N0813688, N0813320, N0744867, N0742446, n0775253
@@ -21,7 +21,7 @@ Track::totalTime() - N0782681, N0781255, N0830836, T0103273, N0833220
 Track::travellingTime() - N0800790
 Track::restingTime() - N0804540
 Track::longestRest() - T0103710
-Track::maxSpeed() - N0803348, N0802814, N0801662, N0830182, N0810869
+Track::maxSpeed() - N0802814, N0801662, N0830182, N0810869
 Track::averageSpeed() - N0791408
 Track::maxRateOfAscent() - N0810907, N0810870, n0811700
 Track::maxRateOfDescent() -
