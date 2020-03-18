@@ -31,6 +31,16 @@ BOOST_AUTO_TEST_CASE( multipleValues )
 }
 
 
+BOOST_AUTO_TEST_CASE( incorrectElevation )
+{
+    metres Result = 400;
+
+    Route routeData = Route(gpxDat + "incorrectElevation.gpx", isFileName);
+
+    BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
+}
+
+
 BOOST_AUTO_TEST_CASE( extremePositve )
 {
     metres Result = 99999;
@@ -89,5 +99,26 @@ BOOST_AUTO_TEST_CASE( negativeElevationExtreme )
 
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
+
+
+BOOST_AUTO_TEST_CASE( overflowPositive )
+{
+    metres Result = -1.79769e+309;
+
+    Route routeData = Route(gpxDat + "overflowPosi.gpx", isFileName);
+
+    BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
+}
+
+
+BOOST_AUTO_TEST_CASE( overflowNegative )
+{
+    metres Result = -1.79769e+309;
+
+    Route routeData = Route(gpxDat + "overflowNegative.gpx", isFileName);
+
+    BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
+}
+
 
 BOOST_AUTO_TEST_SUITE_END()
