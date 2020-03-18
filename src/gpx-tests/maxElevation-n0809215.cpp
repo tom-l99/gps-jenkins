@@ -23,7 +23,7 @@ BOOST_AUTO_TEST_CASE( singleValue )
 
 BOOST_AUTO_TEST_CASE ( extremePositve )
 {
-    metres Result = 999999;
+    metres Result = 99999;
 
     Route routeData = Route(gpxDat + "extremePositive.gpx", isFileName);
 
@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE ( extremePositve )
 
 BOOST_AUTO_TEST_CASE ( extremeNegative )
 {
-    metres Result = -999999;
+    metres Result = -99999;
 
     Route routeData = Route(gpxDat + "extremeNegative.gpx", isFileName);
 
