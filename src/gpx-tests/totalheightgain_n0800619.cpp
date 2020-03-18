@@ -37,4 +37,10 @@ BOOST_AUTO_TEST_CASE(valueJustAbovePercentageAccuracy)
     BOOST_CHECK_CLOSE( route.totalHeightGain(), 0.00010, percentageAccuracy);
 }
 
+BOOST_AUTO_TEST_CASE(noElevationField)
+{
+    Route route = Route(LogFiles::GPXRoutesDir + "noElevationField.gpx", isFileName);
+    BOOST_CHECK_THROW(route.totalHeightGain(), std :: invalid_argument);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
