@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<gpx version="1.1" creator="NTU" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+    <rte>
+        <name>ABGLKF</name>
+        <rtept lat="0.143971" lon="21.0357">
+            <name>A</name>
+            <ele>-400000000000.000000</ele>
+        </rtept>
+        <rtept lat="0.143971" lon="-114.821">
+            <name>B</name>
+            <ele>-400000000000.000000</ele>
+        </rtept>
+        <rtept lat="0.0719856" lon="109.322">
+            <name>G</name>
+            <ele>-200000000000.000000</ele>
+        </rtept>
+        <rtept lat="0" lon="-26.5346">
+            <name>L</name>
+            <ele>-200000000000.000000</ele>
+        </rtept>
+        <rtept lat="0" lon="109.322">
+            <name>K</name>
+            <ele>-400000000000.000000</ele>
+        </rtept>
+        <rtept lat="0.0719856" lon="-114.821">
+            <name>F</name>
+            <ele>-400000000000.000000</ele>
+        </rtept>
+    </rte>
+</gpx>
+
+
