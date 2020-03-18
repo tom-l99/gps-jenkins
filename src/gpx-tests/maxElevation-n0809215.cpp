@@ -21,19 +21,9 @@ BOOST_AUTO_TEST_CASE( singleValue )
 }
 
 
-BOOST_AUTO_TEST_CASE ( mutlipleValues )
-{
-    metres Result = 800;
-
-    Route routeData = Route(gpxDat + "multipleValues.gpx", isFileName);
-
-    BOOST_CHECK_EQUAL ( routeData.maxElevation(), Result);
-}
-
-
 BOOST_AUTO_TEST_CASE ( extremePositve )
 {
-    metres Result = 999999;
+    metres Result = 99999;
 
     Route routeData = Route(gpxDat + "extremePositive.gpx", isFileName);
 
@@ -43,31 +33,12 @@ BOOST_AUTO_TEST_CASE ( extremePositve )
 
 BOOST_AUTO_TEST_CASE ( extremeNegative )
 {
-    metres Result = -999999;
+    metres Result = -99999;
 
     Route routeData = Route(gpxDat + "extremeNegative.gpx", isFileName);
 
     BOOST_CHECK_EQUAL ( routeData.maxElevation(), Result);
 }
 
-BOOST_AUTO_TEST_CASE ( multipleElevation )
-{
-
-    metres Result = 800;
-
-    Route routeData = Route(gpxDat + "multipleElevation.gpx", isFileName);
-
-    BOOST_CHECK_EQUAL ( routeData.maxElevation(), Result);
-}
-
-
-BOOST_AUTO_TEST_CASE ( multipleMaxElevation )
-{
-    metres Result = 800;
-
-    Route routeData = Route(gpxDat + "multipleMaxElevation.gpx", isFileName);
-
-    BOOST_CHECK_EQUAL ( routeData.maxElevation(), Result);
-}
 
 BOOST_AUTO_TEST_SUITE_END()
