@@ -43,4 +43,10 @@ BOOST_AUTO_TEST_CASE(noElevationField)
     BOOST_CHECK_THROW(route.totalHeightGain(), std :: invalid_argument);
 }
 
+BOOST_AUTO_TEST_CASE(emptyElevationField)
+{
+    Route route = Route(LogFiles::GPXRoutesDir + "noElevationValue.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
