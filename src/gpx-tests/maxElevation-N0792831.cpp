@@ -117,9 +117,9 @@ BOOST_AUTO_TEST_CASE( missingElevation )
 {
     metres expectedData;
 
-    Route trialRoute = Route(dataDir + "missingElevation.gpx", std::invalid_argument);
+    Route trialRoute = Route(dataDir + "missingElevation.gpx", isFileName);
 
-    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
 
 }
 
