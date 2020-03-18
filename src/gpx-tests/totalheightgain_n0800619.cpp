@@ -24,4 +24,10 @@ BOOST_AUTO_TEST_CASE(typicalInputs2)
     BOOST_CHECK_CLOSE( route.totalHeightGain(), 20000.00000, percentageAccuracy );
 }
 
+BOOST_AUTO_TEST_CASE(oneValue)
+{
+    Route route = Route(LogFiles::GPXRoutesDir + "Q.gpx", isFileName);
+    BOOST_CHECK_EQUAL( route.totalHeightGain() , defaulTotalHeightGain);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
