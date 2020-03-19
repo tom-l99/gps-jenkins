@@ -9,10 +9,10 @@ BOOST_AUTO_TEST_SUITE (Route_minLatitude_N0806708)
 
 
 
-//BOOST_AUTO_TEST_CASE (onePosition)
-//{
+BOOST_AUTO_TEST_CASE (onePosition)
+{
 
-//}
+}
 
 //BOOST_AUTO_TEST_CASE (manyPositions)
 //{
