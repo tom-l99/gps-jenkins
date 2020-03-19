@@ -7,10 +7,10 @@
      xmlns:mytracks="http://mytracks.stichling.info/myTracksGPX/1/0"
      xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <rte>
-<rtept lat="54.42204236984253" lon="30000.118561625480652"><ele>331</ele></rtept>
-<rtept lat="54.50795888900757" lon="30000.120020747184753"><ele>151</ele></rtept>
-<rtept lat="54.50787305831907" lon="30000.120433807373046"><ele>148</ele></rtept>
-<rtept lat="54.50799107551577" lon="30000.120702028274536"><ele>143</ele></rtept>
-<rtept lat="54.50820028781893" lon="30000.120380163192749"><ele>149</ele></rtept>
+<rtept lat="54.42204236984253" lon="-1.118561625"><ele>331</ele></rtept>
+<rtept lat="54.50795888900757" lon="-1.12002074184753"><ele>151</ele></rtept>
+<rtept lat="54.50787305831907" lon="-1.173"><ele>148</ele></rtept>
+<rtept lat="54.50799107551577" lon="-1.120702332323567876536789024536"><ele>143</ele></rtept>
+<rtept lat="54.50820028781893" lon="-1.1219279"><ele>149</ele></rtept>
 </rte>
 </gpx>
