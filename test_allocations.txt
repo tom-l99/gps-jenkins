@@ -15,7 +15,7 @@ Route::operator[]() - N0813118 , N0781349
 Route::findPosition() - T0117244, T0112609, T0121709, N0785398, N0812237
 Route::findNameOf() - N0813688, N0813320, N0744867, N0742446, n0775253
 Route::timesVisited(string) - N0744825
-Route::timesVisited(Position) - N0785380, N0744825, N0778608, N0810909
+Route::timesVisited(Position) - N0785380, N0744825, N0778608, N0810909, N0813926
 Route::containsCycles() -
 Track::totalTime() - N0782681, N0781255, N0830836, T0103273, N0833220
 Track::travellingTime() - N0800790
