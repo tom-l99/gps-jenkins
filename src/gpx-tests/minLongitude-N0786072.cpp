@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_CASE( longitude_RepeatedSmallest )
     BOOST_CHECK_EQUAL( route.minLongitude(), 109.42 );
 }
 
-// Have small file (5 elements?) with typical longitude values for UK
+// Small typical file
 BOOST_AUTO_TEST_CASE( longitude_SmallActualFile )
 {
     Route route = Route( myDirectory + "smallActualRoute.gpx", isFileName);
