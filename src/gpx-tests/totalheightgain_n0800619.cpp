@@ -13,6 +13,7 @@ const bool isFileName = true; // All GPX data in this suite is provided from fil
 
 BOOST_AUTO_TEST_CASE(typicalInputs)
 {
+    const metres expectedValue = 0.00000;
     const double percentageAccuracy = 0.00001;
     Route route = Route(gpxData + "ABCD.gpx", isFileName);
     BOOST_CHECK_CLOSE( route.totalHeightGain(), 0.00000, percentageAccuracy );
@@ -44,11 +45,11 @@ BOOST_AUTO_TEST_CASE(noElevationField)
     BOOST_CHECK_THROW(route.totalHeightGain(), std :: invalid_argument);
 }
 
-BOOST_AUTO_TEST_CASE(emptyElevationField)
-{
-    Route route = Route(gpxData + "noElevationValue.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
-}
+//BOOST_AUTO_TEST_CASE(emptyElevationField)
+//{
+//    Route route = Route(gpxData + "noElevationValue.gpx", isFileName);
+//    BOOST_CHECK_EQUAL(route.totalHeightGain(), defaulTotalHeightGain);
+//}
 
 BOOST_AUTO_TEST_CASE(negativeEleGivesNegDifferenceBetweenPoints)
 {
