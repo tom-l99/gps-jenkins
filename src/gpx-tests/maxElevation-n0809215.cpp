@@ -115,7 +115,7 @@ BOOST_AUTO_TEST_CASE( overflowPositive )
 {
     metres Result = -1.79769e+309;
 
-    Route routeData = Route(gpxDat + "overflowPositivegpx", isFileName);
+    Route routeData = Route(gpxDat + "overflowPositive.gpx", isFileName);
 
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result );
 }
