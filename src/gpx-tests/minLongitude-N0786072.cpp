@@ -10,7 +10,7 @@ using namespace GPS;
 BOOST_AUTO_TEST_SUITE( Route_minLongitude_N0786072 )
 
 const bool isFileName = true; // All GPX data in this suite is provided as a file
-std::string myDirectory = LogFiles::GPXRoutesDir + "/N0786072/";
+std::string myDirectory = LogFiles::GPXRoutesDir + "N0786072/";
 
 // Empty
 BOOST_AUTO_TEST_CASE( longitude_Empty )
