@@ -7,7 +7,6 @@
 using namespace GPS;
 namespace utf = boost::unit_test;
 
-
 BOOST_AUTO_TEST_SUITE( minLatitude )
 
 const bool isFileName = true;
@@ -22,13 +21,19 @@ BOOST_AUTO_TEST_CASE(samePosition,* utf::tolerance(0.2))
 }
 
 
-BOOST_AUTO_TEST_CASE(highestNegativeValue,* utf::tolerance(0.2))
+BOOST_AUTO_TEST_CASE(highestNegativeValue,* utf::tolerance(0.1))
 {
-    //double expectedResult = -0.089982;
-    //Route route = Route(gpxData+"AS.gpx",isFileName);
+    double expectedResult = -0.089982;
+    Route route = Route(gpxData+"SY.gpx",isFileName);
 
-    //BOOST_TEST(route.minLatitude() == expectedResult);
+    BOOST_TEST(route.minLatitude() == expectedResult);
 }
+
+//BOOST_AUTO_TEST_CASE(,* utf::tolerance(0.1))
+//{
+
+//}
+
 
 
 BOOST_AUTO_TEST_SUITE_END()
