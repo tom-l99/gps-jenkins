@@ -7,7 +7,7 @@
 using namespace GPS;
 
 //BOOST Description
-//This is the description of the test suite and the declartion for the log file which i have containing the GPX data
+//This is the description of the test suite and the declartion for the log file which i have containing the GPX datas
 BOOST_AUTO_TEST_SUITE ( maxElevation_N0809215 )
 
 const bool isFileName = true;
