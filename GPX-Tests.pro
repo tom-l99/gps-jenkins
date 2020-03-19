@@ -36,7 +36,6 @@ SOURCES += \
 #   src/gpx-tests/minElevation-n0806748.cpp \ Commented out due to broken code
 #   src/gpx-tests/maxlongitude-n0799125.cpp \ As per Neil's request
 #   src/gpx-tests/maxlatitude-n0798917.cpp \
-#   src/gpx-tests/totalLength-n0786783.cpp  \
     src/gpx-tests/totalLength-n0786783.cpp  \
     src/gpx-tests/maxElevation-N0792831.cpp \
     src/gpx-tests/travellingTime-N0800790.cpp \
