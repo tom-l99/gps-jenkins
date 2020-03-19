@@ -11,6 +11,11 @@ const bool isFileName = true; // All GPX data in this suite is provided as a fil
 std::string myDirectory = LogFiles::GPXRoutesDir + "/N0786072/";
 
 // Empty
+BOOST_AUTO_TEST_CASE( longitude_empty )
+{
+    Route route = Route(myDirectory + "longitudeEmpty.gpx", isFileName);
+    BOOST_CHECK_EQUAL( route.minLongitude(), 1 );
+}
 
 // Blank
 
