@@ -47,6 +47,17 @@ BOOST_AUTO_TEST_CASE( incorrectElevation )
     BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
 }
 
+//This test is designed to check the gpx file for no elevation inputted
+BOOST_AUTO_TEST_CASE( blankElevation )
+{
+    metres Result = 0;
+
+    Route routeData = Route(gpxDat + "blankElevation.gpx", isFileName);
+
+    BOOST_CHECK_EQUAL( routeData.maxElevation(), Result) ;
+}
+
+
 //Boundary Cases
 //This test is designed to find the extreme positive that the elevation can be
 BOOST_AUTO_TEST_CASE( extremePositve )
