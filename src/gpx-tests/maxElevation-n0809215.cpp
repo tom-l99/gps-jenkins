@@ -21,9 +21,9 @@ BOOST_AUTO_TEST_CASE( singleValue )
 {
     metres Result = 700;
 
-    Route routeData = Route(gpxDat + "singleValue.gpx", isFileName);
+    Route routeData = Route(LogFiles::GPXRoutesDir + "/N0809215/singleValue.gpx", isFileName);
 
-    BOOST_CHECK_EQUAL( routeData.maxElevation(), Result);
+    BOOST_TEST( routeData.maxElevation() == Result);
 }
 
 //This test is designed to search through the GPX data and pick out a single value from a file where there multiple values inputted
