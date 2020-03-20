@@ -14,15 +14,10 @@ BOOST_AUTO_TEST_SUITE(MinLongitudeN0782914)
  * First, typical .gpx files are tested with no errors for generic use cases, including
  * data sets of varying lengths.
  *
- * Next, we test for outliers ranging from very typical to extreme, which would
- * possibly be due to error in the measuring equipment. For longitude, extreme values must
- * be considered as the values '1.00000', '361.00000', and '5761.00000' are all valid
- * and refer to the same latitude.
- *
- * We then test for extremely unlikely results, such as an empty value for longitude,
- * mixed significant figures in the data, or a value of negative 0. There are unlikely
- * to occur without some form of tampering, but the program should be robust enough
- * to be able to handle these cases even though they are very unlikely to occur.
+ * We then test for extremely unlikely results, such as mixed significant figures in the data,
+ * or a value of negative 0. These are unlikely to occur without some form of tampering,
+ * but the program should be robust enough to be able to handle these cases even though they
+ * are very unlikely to occur.
  */
 
 
@@ -78,27 +73,60 @@ BOOST_AUTO_TEST_CASE(negativeMinimum)
 }
 
 // Checks that the correct longitude value is returned
-// when the minimum value is an extremely low number.
-BOOST_AUTO_TEST_CASE(extremeLow)
-{
-    Route route = Route(directory + "extremeLow.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), -30000.120380163192749);
-}
-
-// Checks that the correct longitude value is returned
-// when the minimum value is an extremely high number.
-BOOST_AUTO_TEST_CASE(extremeHigh)
-{
-    Route route = Route(directory + "extremeHigh.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), 30000.118561625480652);
-}
-
-// Checks that the correct longitude value is returned
 // when the minimum value is zero.
 BOOST_AUTO_TEST_CASE(minValueZero)
 {
     Route route = Route(directory + "minValueZero.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), 0);
+}
+
+//High variance
+BOOST_AUTO_TEST_CASE(highVariance)
+{
+    Route route = Route(directory + "highVariance.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), -65.120380163192749);
+}
+
+//Low variance
+BOOST_AUTO_TEST_CASE(lowVariance)
+{
+    Route route = Route(directory + "lowVariance.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), 1.000000000000046);
+}
+
+//Very small difference
+BOOST_AUTO_TEST_CASE(verySmallDifference)
+{
+    Route route = Route(directory + "verySmallDifference.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), 1.000000000000045);
+}
+
+//First is minimum
+BOOST_AUTO_TEST_CASE(firstValueMinimum)
+{
+    Route route = Route(directory + "firstValueMinimum.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), );
+}
+
+//Last is minimum
+BOOST_AUTO_TEST_CASE(lastValueMinimum)
+{
+    Route route = Route(directory + "lastValueMinimum.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), );
+}
+
+//Middle is minimum
+BOOST_AUTO_TEST_CASE(middleValueMinimum)
+{
+    Route route = Route(directory + "middleValueMinimum.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), );
+}
+
+//Multiple minimums
+BOOST_AUTO_TEST_CASE(multipleMinimums)
+{
+    Route route = Route(directory + "multipleMinimums.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), );
 }
 
 // Checks that the correct longitude value is returned
@@ -118,29 +146,11 @@ BOOST_AUTO_TEST_CASE(mixedSigFigs)
 }
 
 // Checks that the correct longitude value is returned
-// from a dataset containing an empty value.
-BOOST_AUTO_TEST_CASE(emptyLong)
-{
-    Route route = Route(directory + "emptyLong.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), -1.116346120834351);
-}
-
-// Checks that the correct longitude value is returned
 // from a dataset containing a value of negative zero.
 BOOST_AUTO_TEST_CASE(minValueMinusZero)
 {
     Route route = Route(directory + "minValueMinusZero.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), 0);
 }
-
-// Checks that the correct longitude value is returned
-// when the dataset contains single quotation marks (')
-// rather than double quotation marks (")
-BOOST_AUTO_TEST_CASE(singleQuotation)
-{
-    Route route = Route(directory + "singleQuotation.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), -1.120380163192749);
-}
-
 
 BOOST_AUTO_TEST_SUITE_END()
