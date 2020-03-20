@@ -11,7 +11,7 @@ BOOST_AUTO_TEST_SUITE( Route_minLongitude_N0786072 )
 
 /* Route.minLongitude() should return the minimum value for the longitude from a given Route,
  * which is taken from the content of the ' <rtept> lon="" ' element (within the <rte> element)
- * in the GPX data that the Route was made from.
+ * in the GPX data file that the Route was made from.
  *
  * The main point for testing is to ascertain if the function is able to correctly identify
  * the longitude values from the route, and then store and return which one is the smallest - or
