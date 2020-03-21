@@ -1,12 +1,13 @@
 #include <boost/test/unit_test.hpp>
 
+#include "logs.h"
 #include "types.h"
 #include "route.h"
 
 using namespace GPS;
 
 
-BOOST_AUTO_TEST_SUITE( RouteMaxElevation )
+BOOST_AUTO_TEST_SUITE( max_elevation_n0792831 )
 
 const bool isFileName = true;
 std::string dataDir = LogFiles::GPXRoutesDir + "/N0792831/";
