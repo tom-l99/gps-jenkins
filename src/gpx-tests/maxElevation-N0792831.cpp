@@ -131,7 +131,7 @@ BOOST_AUTO_TEST_CASE( mulitpleNegative )
 
 //    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
 
-}
+//}
 
 
 
