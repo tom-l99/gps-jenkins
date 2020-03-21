@@ -113,15 +113,15 @@ BOOST_AUTO_TEST_CASE( mulitpleNegative )
 
 }
 
-//BOOST_AUTO_TEST_CASE( missingElevation )
-//{
-//    metres expectedData;
+BOOST_AUTO_TEST_CASE( missingElevation )
+{
+    metres expectedData;
 
-//    Route trialRoute = Route(dataDir + "missingElevation.gpx", isFileName);
+    Route trialRoute = Route(dataDir + "missingElevation.gpx", isFileName);
 
-//    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
 
-//}
+}
 
 BOOST_AUTO_TEST_CASE( multipleValuesSomeMissing )
 {
@@ -129,7 +129,7 @@ BOOST_AUTO_TEST_CASE( multipleValuesSomeMissing )
 
     Route trialRoute = Route(dataDir + "multipleValuesSomeMissing.gpx", isFileName);
 
-    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
 
 }
 
