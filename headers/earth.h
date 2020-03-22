@@ -14,7 +14,7 @@ namespace GPS
       extern const Position CityCampus;
       extern const Position Pontianak;
 
-      extern const Position example;
+      extern const Position OutOfRange;
 
       extern const metres meanRadius;
       extern const metres equatorialCircumference;
