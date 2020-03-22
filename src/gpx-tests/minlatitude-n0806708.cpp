@@ -7,7 +7,7 @@
 using namespace GPS;
 using namespace std;
 
-BOOST_AUTO_TEST_SUITE (Route_minLatitude_N0806708)
+BOOST_AUTO_TEST_SUITE (minLatitude_N0806708)
 
 const bool isFileName = true;
 string directory = LogFiles::GPXRoutesDir + "/N0806708/";
@@ -83,21 +83,21 @@ BOOST_AUTO_TEST_CASE (latitudeBorderHigh)
     BOOST_CHECK_EQUAL(testData.minLatitude(), 90);
 }
 
-BOOST_AUTO_TEST_CASE (latitudeTooLow)
-{
-    Route testData = Route(directory + "latitudeTooLow.gpx", isFileName);
-    BOOST_CHECK_EQUAL(testData.minLatitude(), NULL);
-}
+//BOOST_AUTO_TEST_CASE (latitudeTooLow)
+//{
+    //Route testData = Route(directory + "latitudeTooLow.gpx", isFileName);
+    //BOOST_CHECK_EQUAL(testData.minLatitude(), NULL);
+//}
 
-BOOST_AUTO_TEST_CASE (latitudeTooHigh)
-{
-    Route testData = Route(directory + "latitudeTooHigh.gpx", isFileName);
-    BOOST_CHECK_EQUAL(testData.minLatitude(), NULL);
-}
+//BOOST_AUTO_TEST_CASE (latitudeTooHigh)
+//{
+  //  Route testData = Route(directory + "latitudeTooHigh.gpx", isFileName);
+   // BOOST_CHECK_EQUAL(testData.minLatitude(), NULL);
+//}
 
-BOOST_AUTO_TEST_CASE (boostToleranceFLTPNT)
-{
+//BOOST_AUTO_TEST_CASE (boostToleranceFLTPNT)
+//{
 
-}
+//}
 
 BOOST_AUTO_TEST_SUITE_END()
