@@ -9,14 +9,14 @@ using namespace std;
 
 BOOST_AUTO_TEST_SUITE (minLatitude_N0806708)
 
-//const bool isFileName = true;
-//string directory = LogFiles::GPXRoutesDir + "/N0806708/";
+const bool isFileName = true;
+string directory = LogFiles::GPXRoutesDir + "/N0806708/";
 
-//BOOST_AUTO_TEST_CASE (onePosition)
-//{
-//    Route testData = Route(directory + "onePosition.gpx", isFileName);
-//    BOOST_CHECK_EQUAL(testData.minLatitude(), 0.0179964);
-//}
+BOOST_AUTO_TEST_CASE (onePosition)
+{
+    Route testData = Route(directory + "onePosition.gpx", isFileName);
+    BOOST_CHECK_EQUAL(testData.minLatitude(), 0.0179964);
+}
 
 //BOOST_AUTO_TEST_CASE (zeroLatitude)
 //{
