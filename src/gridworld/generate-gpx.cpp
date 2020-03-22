@@ -17,7 +17,7 @@ int main()
 
 
     // square distance metres and height
-    GridWorldModel Grid_unit_distance = GPS::GridWorldModel(Earth::OutOfRange, 10000, 10);
+    GridWorldModel Grid_unit_distance = GPS::GridWorldModel(Earth::Pontianak, 10000, 10);
     
     std::string exampleRouteString = "CHMRW";
     
