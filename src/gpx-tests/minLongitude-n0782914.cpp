@@ -20,7 +20,6 @@ BOOST_AUTO_TEST_SUITE(MinLongitudeN0782914)
  * are very unlikely to occur.
  */
 
-
 const bool isFileName = true;
 std::string directory = LogFiles::GPXRoutesDir + "/N0782914/";
 
