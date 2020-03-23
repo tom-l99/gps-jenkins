@@ -8,7 +8,7 @@ using namespace GPS;
 BOOST_AUTO_TEST_SUITE(totalHeightGain_N0800619)
 
 const metres defaulTotalHeightGain = 0.00000;
-const double percentageAccuracy = 0.00001;
+const metres percentageAccuracy = 0.00001;
 std::string gpxData = LogFiles::GPXRoutesDir + "/N0800619/";
 const bool isFileName = true; // All GPX data in this suite is provided from files.
 
