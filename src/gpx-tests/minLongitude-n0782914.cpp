@@ -105,29 +105,31 @@ BOOST_AUTO_TEST_CASE(verySmallDifference)
 BOOST_AUTO_TEST_CASE(firstValueMinimum)
 {
     Route route = Route(directory + "firstValueMinimum.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), );
-}
-
-//Last is minimum
-BOOST_AUTO_TEST_CASE(lastValueMinimum)
-{
-    Route route = Route(directory + "lastValueMinimum.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), );
+    BOOST_CHECK_EQUAL(route.minLongitude(), 1.097061038017273);
 }
 
 //Middle is minimum
 BOOST_AUTO_TEST_CASE(middleValueMinimum)
 {
     Route route = Route(directory + "middleValueMinimum.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), );
+    BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
 }
 
+//Last is minimum
+BOOST_AUTO_TEST_CASE(lastValueMinimum)
+{
+    Route route = Route(directory + "lastValueMinimum.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
+}
+
+/*
 //Multiple minimums
 BOOST_AUTO_TEST_CASE(multipleMinimums)
 {
     Route route = Route(directory + "multipleMinimums.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), );
 }
+*/
 
 // Checks that the correct longitude value is returned
 // when the minimum value is an integer.
