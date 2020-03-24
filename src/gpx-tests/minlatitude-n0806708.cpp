@@ -7,7 +7,7 @@
 using namespace GPS;
 using namespace std;
 
-BOOST_AUTO_TEST_SUITE (minLatitude_N0806708)
+BOOST_AUTO_TEST_SUITE (Route_minLatitude_N0806708)
 
 const bool isFileName = true;
 string directory = LogFiles::GPXRoutesDir + "/N0806708/";
