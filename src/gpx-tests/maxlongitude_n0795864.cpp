@@ -3,13 +3,9 @@
 #include "logs.h"
 #include "types.h"
 #include "route.h"
+BOOST_AUTO_TEST_SUITE(maxlongitude_N0795864);
 using namespace GPS;
 const bool isFileName = false;
-
-/*maxlongitude_n0795864::maxlongitude_n0795864()
-{
-
-}*/
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
 {
@@ -83,3 +79,5 @@ BOOST_AUTO_TEST_CASE(ErrorHigh)
     const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"181\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
 }
+
+BOOST_AUTO_TEST_SUITE_END();
