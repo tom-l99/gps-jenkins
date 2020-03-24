@@ -1,85 +1,48 @@
 #include <boost/test/unit_test.hpp>
 #include "logs.h"
-#include "types.h"
+//#include "types.h"
 #include "route.h"
-#include <iostream>
 
 using namespace GPS;
 
 BOOST_AUTO_TEST_SUITE(maxlongitudeN0795864)
 
 const bool isFileName = false;
+std::string directory = LogFiles::GPXRoutesDir + "/N0795864";
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
 {
-    std::cout<<("In NTU Boost maxlongitude\n");
-    //Route route = Route(directory + "singleValue.gpx", isFileName);
-    const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-1.040540\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "NTUSinglePos.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), -1.04054 );
 }
 //boundaries
 BOOST_AUTO_TEST_CASE(Min)
 {
-    std::cout<<("In minimum Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>Minimum</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "SinglePosMin.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), -180 );
 }
 
 BOOST_AUTO_TEST_CASE(Max)
 {
-    std::cout<<("In maximum Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>Maximum</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "SinglePosMax.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), 180 );
 }
+//multiple positions
 BOOST_AUTO_TEST_CASE(Last)
 {
-    std::cout<<("In biggest last Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"80\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "MultiplePosLast.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
 BOOST_AUTO_TEST_CASE(Mid)
 {
-    std::cout<<("In biggest mid Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-80\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "MultiplePosMid.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
 BOOST_AUTO_TEST_CASE(First)
 {
-    std::cout<<("In biggest first Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>,"
-                                "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-80\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
+    Route route = Route(directory + "MultiplePosFirst.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
-//error cases
-BOOST_AUTO_TEST_CASE(ErrorLow)
-{
-    std::cout<<("In minimum Boost maxlongitude\n");
+//error cases already taken care of
 
-    const std::string gpxData ="<gpx><rte><name>Minimum</name><rtept lat=\"52.946670\" lon=\"-181\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
-}
-
-BOOST_AUTO_TEST_CASE(ErrorHigh)
-{
-    std::cout<<("In maximum Boost maxlongitude\n");
-
-    const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"181\"></rtept></rte></gpx>";
-    Route route = Route(gpxData, isFileName);
-}
 BOOST_AUTO_TEST_SUITE_END()
