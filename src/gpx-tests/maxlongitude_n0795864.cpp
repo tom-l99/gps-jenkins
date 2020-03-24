@@ -6,7 +6,7 @@
 
 using namespace GPS;
 
-BOOST_AUTO_TEST_SUITE(maxlongitude_N0795864);
+BOOST_AUTO_TEST_SUITE(maxlongitudeN0795864)
 const bool isFileName = false;
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
