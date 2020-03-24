@@ -79,5 +79,4 @@ BOOST_AUTO_TEST_CASE(ErrorHigh)
     const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"181\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
 }
-
 BOOST_AUTO_TEST_SUITE_END();
