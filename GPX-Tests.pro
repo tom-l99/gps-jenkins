@@ -15,7 +15,7 @@ HEADERS += \
     headers/types.h \
     headers/xml/parser.h \
     headers/xml/element.h \
-#    src/gpx-tests/maxlongitude_n0799202.h
+
 
 SOURCES += \
     src/earth.cpp \
@@ -29,8 +29,19 @@ SOURCES += \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
     src/gpx-tests/numpositions.cpp \
-#    src/gpx-tests/maxlongitude_n0799202.cpp \
-    src/gpx-tests/totalheightgain_t0117358.cpp
+    src/gpx-tests/minElevation-N0815715.cpp \
+    src/gpx-tests/name.cpp \
+    src/gpx-tests/netHeightGain-T0084153.cpp \
+    src/gpx-tests/netlength-T0112963.cpp \
+    src/gpx-tests/numpositions.cpp \
+    src/gpx-tests/totalLength-n0790170.cpp \
+    src/gpx-tests/totalLength_N0815464.cpp \
+    src/gpx-tests/totaltime_n0781255.cpp \
+    src/gpx-tests/longestRest-T0103710.cpp \
+    src/gpx-tests/minlatitude_n0743900.cpp \
+    src/gpx-tests/findposition-t0117244.cpp
+
+    src/gpx-tests/findposition-t0117244.cpp
 
 INCLUDEPATH += headers/  headers/xml/
 
