@@ -20,6 +20,7 @@ SOURCES += \
     src/earth.cpp \
     src/gpx-tests.cpp \
     src/geometry.cpp \
+    src/gpx-tests/maxlongitude_n0795864.cpp \
     src/logs.cpp \
     src/position.cpp \
     src/route.cpp \
@@ -53,3 +54,7 @@ TARGET = $$_PRO_FILE_PWD_/execs/gpx-tests
 
 LIBS += -lboost_unit_test_framework
 
+macx{
+INCLUDEPATH += "/usr/local/Cellar/boost/1.72.0/include"
+LIBS += -L"/usr/local/Cellar/boost/1.72.0/lib"
+}

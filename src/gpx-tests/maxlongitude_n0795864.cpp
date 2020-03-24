@@ -1,19 +1,21 @@
-#include "maxlongitude_n0795864.h"
 #include <boost/test/unit_test.hpp>
 #include "logs.h"
 #include "types.h"
 #include "route.h"
-BOOST_AUTO_TEST_SUITE(maxlongitude_N0795864);
+#include <iostream>
+
 using namespace GPS;
+
+BOOST_AUTO_TEST_SUITE(maxlongitude_N0795864);
 const bool isFileName = false;
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
 {
     std::cout<<("In NTU Boost maxlongitude\n");
-
+    //Route route = Route(directory + "singleValue.gpx", isFileName);
     const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-1.040540\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), -1.04054 );
+    BOOST_CHECK_EQUAL( route.maxLongitude(), -1.04054 );
 }
 //boundaries
 BOOST_AUTO_TEST_CASE(Min)
@@ -22,7 +24,7 @@ BOOST_AUTO_TEST_CASE(Min)
 
     const std::string gpxData ="<gpx><rte><name>Minimum</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), -180 );
+    BOOST_CHECK_EQUAL( route.maxLongitude(), -180 );
 }
 
 BOOST_AUTO_TEST_CASE(Max)
@@ -31,7 +33,7 @@ BOOST_AUTO_TEST_CASE(Max)
 
     const std::string gpxData ="<gpx><rte><name>Maximum</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), 180 );
+    BOOST_CHECK_EQUAL( route.maxLongitude(), 180 );
 }
 BOOST_AUTO_TEST_CASE(Last)
 {
@@ -41,7 +43,7 @@ BOOST_AUTO_TEST_CASE(Last)
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"80\"></rtept></rte></gpx>,"
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), 180);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
 BOOST_AUTO_TEST_CASE(Mid)
 {
@@ -51,7 +53,7 @@ BOOST_AUTO_TEST_CASE(Mid)
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"180\"></rtept></rte></gpx>,"
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-80\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), 180);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
 BOOST_AUTO_TEST_CASE(First)
 {
@@ -61,7 +63,7 @@ BOOST_AUTO_TEST_CASE(First)
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-180\"></rtept></rte></gpx>,"
                                 "<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"-80\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
-    BOOST_CHECK_EQUAL( route.maxLongitude(gpxData), 180);
+    BOOST_CHECK_EQUAL( route.maxLongitude(), 180);
 }
 //error cases
 BOOST_AUTO_TEST_CASE(ErrorLow)
