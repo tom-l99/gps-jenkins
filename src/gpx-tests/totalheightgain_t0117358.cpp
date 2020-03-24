@@ -6,7 +6,7 @@
 
 using namespace GPS;
 
-BOOST_AUTO_TEST_SUITE( Route_totalHeightGain )
+BOOST_AUTO_TEST_SUITE( Route_totalHeightGain_T0117358 )
 
 const bool isFileName = true;
 const metres horizontalGirdUNit = 10000;
