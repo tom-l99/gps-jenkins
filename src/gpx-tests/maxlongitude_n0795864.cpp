@@ -7,6 +7,7 @@
 using namespace GPS;
 
 BOOST_AUTO_TEST_SUITE(maxlongitudeN0795864)
+
 const bool isFileName = false;
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
@@ -81,4 +82,4 @@ BOOST_AUTO_TEST_CASE(ErrorHigh)
     const std::string gpxData ="<gpx><rte><name>NTU</name><rtept lat=\"52.946670\" lon=\"181\"></rtept></rte></gpx>";
     Route route = Route(gpxData, isFileName);
 }
-BOOST_AUTO_TEST_SUITE_END();
+BOOST_AUTO_TEST_SUITE_END()
