@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<gpx version="1.1"
+     creator="myTracks"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:mytracks="http://mytracks.stichling.info/myTracksGPX/1/0"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<rte>
+<rtept lat="54.41450536251068" lon="-1.101304292678833"><ele>422</ele></rtept>
+<rtept lat="54.41439807415009" lon="-1.100896596908569"><ele>414</ele></rtept>
+<rtept lat="54.41425859928131" lon="-1.100698113441467"><ele>424</ele></rtept>
+<rtept lat="54.41406548023224" lon="-1.100547909736633"><ele>421</ele></rtept>
+<rtept lat="54.41398501396177" lon="-1.100327968597412"><ele>425</ele></rtept>
+<rtept lat="54.41384553909302" lon="-1.100070476531982"><ele>430</ele></rtept>
+<rtept lat="54.41375434398651" lon="-1.099850535392761"><ele>429</ele></rtept>
+<rtept lat="54.4136309623718" lon="-1.099668145179749"><ele>438</ele></rtept>
+<rtept lat="54.41347002983091" lon="-1.099539399147034"><ele>435</ele></rtept>
+<rtept lat="54.4133734703064" lon="-1.099453568458558"><ele>437</ele></rtept>
+<rtept lat="54.4132339954376" lon="-1.099292635917664"><ele>440</ele></rtept>
+<rtept lat="54.41307842731478" lon="-1.099174618721009"><ele>433</ele></rtept>
+<rtept lat="54.41302478313446" lon="-1.098976135253907"><ele>444</ele></rtept>
+<rtept lat="54.41286385059359" lon="-1.098766922950745"><ele>438</ele></rtept>
+<rtept lat="54.41276192665098" lon="-1.098750829696655"><ele>442</ele></rtept>
+<rtept lat="54.41263318061831" lon="-1.098541617393493"><ele>442</ele></rtept>
+<rtept lat="54.4125097990036" lon="-1.098509430885315"><ele>446</ele></rtept>
+<rtept lat="54.41230058670044" lon="-1.0983806848526"><ele>445</ele></rtept>
+<rtept lat="54.41219329833982" lon="-1.098300218582153"><ele>443</ele></rtept>
+<rtept lat="54.41195189952848" lon="-1.098214387893677"><ele>436</ele></rtept>
+<rtept lat="54.41176950931549" lon="-1.098107099533081"><ele>426</ele></rtept>
+<rtept lat="54.41165685653684" lon="-1.097956895828247"><ele>439</ele></rtept>
+<rtept lat="54.41146373748779" lon="-1.097967624664307"><ele>436</ele></rtept>
+<rtept lat="54.41136717796328" lon="-1.09787106513977"><ele>450</ele></rtept>
+<rtept lat="54.41114723682406" lon="-1.097683310508728"><ele>441</ele></rtept>
+<rtept lat="54.41100239753725" lon="-1.097688674926758"><ele>444</ele></rtept>
+<rtept lat="54.41088974475863" lon="-1.097543835639953"><ele>448</ele></rtept>
+<rtept lat="54.41073417663572" lon="-1.097484827041626"><ele>449</ele></rtept>
+<rtept lat="54.41057324409487" lon="-1.097350716590881"><ele>451</ele></rtept>
+<rtept lat="54.41041231155398" lon="-1.097227334976197"><ele>448</ele></rtept>
+<rtept lat="54.41026747226715" lon="-1.097205877304077"><ele>447</ele></rtept>
+<rtept lat="54.41009044647217" lon="-1.097195148468018"><ele>449</ele></rtept>
+<rtept lat="54.40995097160337" lon="-1.097221970558166"><ele>450</ele></rtept>
+<rtept lat="54.40981686115265" lon="-1.097061038017273"><ele>451</ele></rtept>
+<rtept lat="54.40963447093961" lon="-1.097034215927124"><ele>452</ele></rtept>
+<rtept lat="54.40950036048887" lon="-1.096937656402588"><ele>455</ele></rtept>
+<rtept lat="54.40935552120209" lon="-1.096953749656677"><ele>456</ele></rtept>
+<rtept lat="54.40924286842344" lon="-1.096841096878052"><ele>460</ele></rtept>
+<rtept lat="54.40914630889893" lon="-1.09663188457489"><ele>455</ele></rtept>
+<rtept lat="54.40910339355469" lon="-1.096390485763549"><ele>454</ele></rtept>
+<rtept lat="54.40898537635801" lon="-1.096229553222657"><ele>466</ele></rtept>
+</rte>
+</gpx>
+
