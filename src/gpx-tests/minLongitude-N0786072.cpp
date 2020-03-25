@@ -1,7 +1,5 @@
 #include <boost/test/unit_test.hpp>
 
-#define BOOST_TEST_MODULE minLongitude_N0786072
-
 #include "logs.h"
 #include "route.h"
 
@@ -32,6 +30,13 @@ BOOST_AUTO_TEST_SUITE( Route_minLongitude_N0786072 )
 
 const bool isFileName = true; // All GPX data in this suite is provided as a file
 std::string myDirectory = LogFiles::GPXRoutesDir + "N0786072/";
+
+// Checks that it works even if only given a single value
+BOOST_AUTO_TEST_CASE( longitude_SingleValue )
+{
+    Route route = Route( myDirectory + "longitudeSingleValue.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), -1.118760108947754 );
+}
 
 // Checks that it can correctly extract the minimum longitude from a small data set
 BOOST_AUTO_TEST_CASE( longitude_SmallActualFile )
@@ -87,6 +92,13 @@ BOOST_AUTO_TEST_CASE( longitude_NegZero )
 {
     Route route = Route( myDirectory + "longitudeNegZero.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), 0 );
+}
+
+// Checks that it can deal with numbers of very similar value
+BOOST_AUTO_TEST_CASE( longitude_SimilarValues )
+{
+    Route route = Route( myDirectory + "longitudeSimilarValues.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 108.999999 );
 }
 
 // Checks that it can handle repeated instances of the desired value
