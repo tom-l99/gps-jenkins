@@ -34,15 +34,15 @@ BOOST_AUTO_TEST_CASE ( singlePoint, * utf::tolerance(0.000001) )
 
 
 //Check that function works when Latitude = 0
-BOOST_AUTO_TEST_CASE ( latitude_zero, * utf::tolerance(0.000001) )
+BOOST_AUTO_TEST_CASE ( latitude_zero )
 {
     Route route = Route(Data + "VRN.gpx", isFileName);
 
-    BOOST_TEST(route.maxLatitude() == 0);
+    BOOST_CHECK_EQUAL(route.maxLatitude(), 0);
 }
 
 
-//Check that function works with duplciate latitude values adn returnst he highest latitude
+//Check that function works with duplciate latitude values and returns the highest latitude
 BOOST_AUTO_TEST_CASE ( duplicate_latitude, * utf::tolerance(0.000001) )
 {
     degrees maxLat = 0.179964;
@@ -63,48 +63,38 @@ BOOST_AUTO_TEST_CASE ( negative_latitude, * utf::tolerance(0.000001) )
 
 
 //Check that function works with positive extreme value i.e Latitude = 90
-BOOST_AUTO_TEST_CASE ( max_valid, * utf::tolerance(0.0001) )
+BOOST_AUTO_TEST_CASE ( max_valid )
 {
     degrees maxLat = 90;
     Route route = Route(Data + "positive_edge.gpx", isFileName);
 
-    BOOST_TEST(route.maxLatitude() == maxLat);
+    BOOST_CHECK_EQUAL(route.maxLatitude(), maxLat);
 }
 
 
 //Check that function works with negative extreme value i.e Latitude = -90
-BOOST_AUTO_TEST_CASE ( min_valid, * utf::tolerance(0.0001) )
+BOOST_AUTO_TEST_CASE ( min_valid )
 {
     degrees maxLat = -90;
     Route route = Route(Data + "negative_edge.gpx", isFileName);
 
-    BOOST_TEST(route.maxLatitude() == maxLat);
+    BOOST_CHECK_EQUAL(route.maxLatitude(), maxLat);
 }
 
 
 //Check that function works with positive corner cases i.e Latitude = 89
-BOOST_AUTO_TEST_CASE ( positive_corner, * utf::tolerance(0.0001) )
+BOOST_AUTO_TEST_CASE ( positive_corner )
 {
     Route route = Route(Data + "positive_corner.gpx", isFileName);
-    BOOST_TEST(route.maxLatitude() == 89);
+    BOOST_CHECK_EQUAL(route.maxLatitude(), 89);
 }
 
 
 //Check that function works with negative corner cases i.e Latitude = -89
-BOOST_AUTO_TEST_CASE ( negative_corner, * utf::tolerance(0.0001) )
+BOOST_AUTO_TEST_CASE ( negative_corner )
 {
     Route route = Route(Data + "negative_corner.gpx", isFileName);
-    BOOST_TEST(route.maxLatitude() == -89);
+    BOOST_CHECK_EQUAL(route.maxLatitude(), -89);
 }
-
-
-//Function should throw an out of range error if latitude is beyond the range i.e outside -90 to 90
-BOOST_AUTO_TEST_CASE ( above_max_valid )
-{
-    Route route = Route(Data + "max_boundary", isFileName);
-
-    BOOST_CHECK_THROW (route.maxLatitude(), std::out_of_range);
-}
-
 
 BOOST_AUTO_TEST_SUITE_END( )
