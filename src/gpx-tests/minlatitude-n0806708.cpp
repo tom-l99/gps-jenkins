@@ -42,12 +42,14 @@ BOOST_AUTO_TEST_CASE (duplicatePositions)
     BOOST_CHECK_EQUAL(testData.minLatitude(), 0.89982);
 }
 
+// Test to prove that the function will return the minimum latitiude even if it returns a negative value
 BOOST_AUTO_TEST_CASE (negativeMinimumLatitude)
 {
     Route testData = Route(directory + "negativeMinimumLatitude.gpx", isFileName);
     BOOST_CHECK_EQUAL(testData.minLatitude(), -0.89982);
 }
 
+// Test to prove that the function will return the minimum latitiude even if it returns a positive value
 BOOST_AUTO_TEST_CASE (positiveMinimumLatitude)
 {
     Route testData = Route(directory + "positiveMinimumLatitude.gpx", isFileName);
@@ -68,17 +70,20 @@ BOOST_AUTO_TEST_CASE (manyPositions)
     BOOST_CHECK_EQUAL(testData.minLatitude(), -1.79964);
 }
 
+// Test to prove that the function will return the minimum latitiude even if the longitudes are different
 BOOST_AUTO_TEST_CASE (sameLatitudeDifferentLongitude)
 {
     Route testData = Route(directory + "sameLatitudeDifferentLongitude.gpx", isFileName);
     BOOST_CHECK_EQUAL(testData.minLatitude(), 0.89982);
 }
 
+// Test to prove that the function will return the minimum latitiude to at least 6 decimal places
 BOOST_AUTO_TEST_CASE (closePositions)
 {
     Route testData = Route(directory + "closePositions.gpx", isFileName);
     BOOST_CHECK_EQUAL(testData.minLatitude(), 0.898471);
 }
+// Tests to prove that the function will return the minimum latitude for boundary cases
 BOOST_AUTO_TEST_CASE (latitudeBorderLow)
 {
     Route testData = Route(directory + "latitudeBorderLow.gpx", isFileName);
