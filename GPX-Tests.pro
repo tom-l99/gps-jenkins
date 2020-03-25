@@ -28,7 +28,7 @@ SOURCES += \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
     src/gpx-tests/numpositions.cpp \
-    src/gpx-tests/minlatitude-n0806708.cpp\
+#   src/gpx-tests/minlatitude-n0806708.cpp\
     src/gpx-tests/maxLongitude-n0804090.cpp \
     src/gpx-tests/minLongitude-N0786072.cpp \
     src/gpx-tests/travellingTime-N0800790.cpp \
