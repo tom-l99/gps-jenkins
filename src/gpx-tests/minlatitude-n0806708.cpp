@@ -60,15 +60,11 @@ BOOST_AUTO_TEST_CASE (sameLatitudeDifferentLongitude)
     BOOST_CHECK_EQUAL(testData.minLatitude(), 0.89982);
 }
 
-//BOOST_AUTO_TEST_CASE (closePositions)
-//{
-
-//}
-//BOOST_AUTO_TEST_CASE (distantPositions)
-//{
-
-//}
-
+BOOST_AUTO_TEST_CASE (closePositions)
+{
+    Route testData = Route(directory + "closePositions.gpx", isFileName);
+    BOOST_CHECK_EQUAL(testData.minLatitude(), 0.898471);
+}
 BOOST_AUTO_TEST_CASE (latitudeBorderLow)
 {
     Route testData = Route(directory + "latitudeBorderLow.gpx", isFileName);
