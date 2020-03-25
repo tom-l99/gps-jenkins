@@ -14,7 +14,7 @@ std::string dataDirectory = LogFiles::GPXRoutesDir + "/N0783935/";
 // when there is only one value within the route
 BOOST_AUTO_TEST_CASE( singuleInput )
 {
-    Route route = Route( dataDirectory + " singleInput.gpx ", isFileName );
+    Route route = Route( dataDirectory + "singleInput.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -0.898312 );
 }
 
@@ -22,23 +22,23 @@ BOOST_AUTO_TEST_CASE( singuleInput )
 // when the minimum value is zero
 BOOST_AUTO_TEST_CASE( zero )
 {
-    Route route = Route( dataDirectory + " zero.gpx", isFileName );
+    Route route = Route( dataDirectory + "zero.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), 0 );
 }
 
 // Tests whether the expected minimum longitude value is returned
-// when the minimum boundary is an integer
-BOOST_AUTO_TEST_CASE( minimumIntegerBoundary )
+// when the minimum edge is an integer
+BOOST_AUTO_TEST_CASE( minimumIntegerEdgeCase )
 {
-    Route route = Route( dataDirectory + " minimumIntegerBoundary.gpx ", isFileName );
+    Route route = Route( dataDirectory + "minimumIntegerEdgeCase.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -180 );
 }
 
 // Tests whether the expected minimum longitude value is returned
-// when the minimum boundary is a decimal
-BOOST_AUTO_TEST_CASE( minimumDecimalBoundary )
+// when the minimum edge is a decimal
+BOOST_AUTO_TEST_CASE( minimumDecimalEdgeCase )
 {
-    Route route = Route( dataDirectory + " minimumDecimalBoundary.gpx ", isFileName );
+    Route route = Route( dataDirectory + "minimumDecimalEdgeCase.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -180.00 );
 }
 
@@ -46,7 +46,7 @@ BOOST_AUTO_TEST_CASE( minimumDecimalBoundary )
 // when the dataset only consists of positive integers
 BOOST_AUTO_TEST_CASE( positiveInteger )
 {
-    Route route = Route( dataDirectory + " positiveIntegers.gpx ", isFileName );
+    Route route = Route( dataDirectory + "positiveIntegers.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), 12 );
 }
 
@@ -54,7 +54,7 @@ BOOST_AUTO_TEST_CASE( positiveInteger )
 // when the dataset only consists of negative integers
 BOOST_AUTO_TEST_CASE( negativeInteger )
 {
-    Route route = Route( dataDirectory + " negativeIntegers.gpx ", isFileName );
+    Route route = Route( dataDirectory + "negativeIntegers.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -168 );
 }
 
@@ -62,7 +62,7 @@ BOOST_AUTO_TEST_CASE( negativeInteger )
 // when the dataset only consists of positive decimals
 BOOST_AUTO_TEST_CASE( positiveDecimal )
 {
-    Route route = Route( dataDirectory + " positiveDecimals.gpx ", isFileName );
+    Route route = Route( dataDirectory + "positiveDecimals.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), 109.142 );
 }
 
@@ -70,7 +70,7 @@ BOOST_AUTO_TEST_CASE( positiveDecimal )
 // when the dataset only consists of negative decimals
 BOOST_AUTO_TEST_CASE( negativeDecimal)
 {
-    Route route = Route( dataDirectory + " negativeDecimals.gpx ", isFileName );
+    Route route = Route( dataDirectory + "negativeDecimals.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -109.412 );
 }
 
@@ -78,7 +78,7 @@ BOOST_AUTO_TEST_CASE( negativeDecimal)
 // when the dataset consists of long decimals
 BOOST_AUTO_TEST_CASE( longDecimals )
 {
-    Route route = Route( dataDirectory + " longDecimals.gpx ", isFileName );
+    Route route = Route( dataDirectory + "longDecimals.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -109.41212994752894658 );
 }
 
@@ -86,7 +86,7 @@ BOOST_AUTO_TEST_CASE( longDecimals )
 // when the dataset consist of values of low variance
 BOOST_AUTO_TEST_CASE( closeDecimalDifference )
 {
-    Route route = Route( dataDirectory + " closeDifference.gpx ", isFileName );
+    Route route = Route( dataDirectory + "closeDecimalDifference.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -109.322194653874 );
 }
 
@@ -94,7 +94,7 @@ BOOST_AUTO_TEST_CASE( closeDecimalDifference )
 // when the dataset consists of both positive and negative integers
 BOOST_AUTO_TEST_CASE( positiveNegativeIntegers )
 {
-    Route route = Route( dataDirectory + " positiveNegativeIntegers.gpx ", isFileName );
+    Route route = Route( dataDirectory + "positiveNegativeIntegers.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -152 );
 }
 
@@ -102,7 +102,7 @@ BOOST_AUTO_TEST_CASE( positiveNegativeIntegers )
 // when the dataset consists of both positive and negative decimals
 BOOST_AUTO_TEST_CASE( positiveNegativeDecimals )
 {
-    Route route = Route( dataDirectory + " positiveNegativeDecimals.gpx ", isFileName );
+    Route route = Route( dataDirectory + "positiveNegativeDecimals.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -72.79458 );
 }
 
@@ -110,28 +110,28 @@ BOOST_AUTO_TEST_CASE( positiveNegativeDecimals )
 // when the dataset consists of both positive and negative decimals and integers
 BOOST_AUTO_TEST_CASE( decimalsIntegers )
 {
-    Route route = Route( dataDirectory + " decimalsIntegers.gpx ", isFileName );
+    Route route = Route( dataDirectory + "decimalsIntegers.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -164.54986 );
 }
 
 // Tests whether the expected minimum longitude value is returned in a small route
 BOOST_AUTO_TEST_CASE( smallRoute )
 {
-    Route route = Route( dataDirectory + " smallRoute.gpx ", isFileName );
+    Route route = Route( dataDirectory + "smallRoute.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.099292635917664 );
 }
 
 // Tests whether the expected minimum longitude value is returned in a medium route
 BOOST_AUTO_TEST_CASE( mediumRoute )
 {
-    Route route = Route( dataDirectory + " mediumRoute.gpx ", isFileName );
+    Route route = Route( dataDirectory + "mediumRoute.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.096229553222657 );
 }
 
 // Tests whether the expected minimum longitude value is returned in a large route
 BOOST_AUTO_TEST_CASE( largeRoute )
 {
-    Route route = Route( dataDirectory + " largeRoute.gpx ", isFileName );
+    Route route = Route( dataDirectory + "largeRoute.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.066730618476867 );
 }
 
@@ -139,7 +139,7 @@ BOOST_AUTO_TEST_CASE( largeRoute )
 // when it is the first value in the dataset
 BOOST_AUTO_TEST_CASE( firstMinimum )
 {
-    Route route = Route( dataDirectory + " firstMinimum.gpx ", isFileName );
+    Route route = Route( dataDirectory + "firstMinimum.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.067057847976685 );
 }
 
@@ -147,7 +147,7 @@ BOOST_AUTO_TEST_CASE( firstMinimum )
 // when it is the last value in the dataset
 BOOST_AUTO_TEST_CASE( lastMinimum )
 {
-    Route route = Route( dataDirectory + " lastMinimum.gpx ", isFileName );
+    Route route = Route( dataDirectory + "lastMinimum.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.066548265875843 );
 }
 
