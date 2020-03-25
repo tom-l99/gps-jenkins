@@ -129,7 +129,7 @@ BOOST_AUTO_TEST_CASE( multipleValuesSomeMissing )
 
     Route trialRoute = Route(dataDir + "multipleValuesSomeMissing.gpx", isFileName);
 
-    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), std::invalid_argument );
+    BOOST_CHECK_EQUAL( trialRoute.maxElevation(), expectedData );
 
 }
 
