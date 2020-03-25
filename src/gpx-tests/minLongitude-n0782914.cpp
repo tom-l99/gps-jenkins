@@ -68,7 +68,7 @@ BOOST_AUTO_TEST_CASE(lastValueMinimum)
 
 // Checks that the correct value is returned
 // when there are two lowest values equal to each other
-// and different latitude values.
+// with different latitude values.
 BOOST_AUTO_TEST_CASE(twoMinimums)
 {
     Route route = Route(directory + "twoMinimums.gpx", isFileName);
@@ -77,7 +77,7 @@ BOOST_AUTO_TEST_CASE(twoMinimums)
 
 // Checks that the correct value is returned
 // when there are three lowest values equal to each other
-// and different latitude values.
+// with different latitude values.
 BOOST_AUTO_TEST_CASE(threeMinimums)
 {
     Route route = Route(directory + "threeMinimums.gpx", isFileName);
