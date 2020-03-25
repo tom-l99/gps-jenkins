@@ -79,56 +79,74 @@ BOOST_AUTO_TEST_CASE(minValueZero)
     BOOST_CHECK_EQUAL(route.minLongitude(), 0);
 }
 
-//High variance
+// Checks that the correct longitude value is returned
+// when the minimum value is among results with high variance.
 BOOST_AUTO_TEST_CASE(highVariance)
 {
     Route route = Route(directory + "highVariance.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), -65.120380163192749);
 }
 
-//Low variance
+// Checks that the correct longitude value is returned
+// when the minimum value is among results with low variance.
 BOOST_AUTO_TEST_CASE(lowVariance)
 {
     Route route = Route(directory + "lowVariance.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), 1.000000000000046);
 }
 
-//Very small difference
+// Checks that the correct minimum value is returned
+// when there is a very small difference between the
+// minimum value and the second lowest value.
 BOOST_AUTO_TEST_CASE(verySmallDifference)
 {
     Route route = Route(directory + "verySmallDifference.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), 1.000000000000045);
 }
 
-//First is minimum
+// Checks that the correct minimum value is returned
+// when the first value of the data set is the minimum value.
 BOOST_AUTO_TEST_CASE(firstValueMinimum)
 {
     Route route = Route(directory + "firstValueMinimum.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), 1.097061038017273);
 }
 
-//Middle is minimum
+// Checks that the correct minimum value is returned
+// when the middle value of the data set is the minimum value.
 BOOST_AUTO_TEST_CASE(middleValueMinimum)
 {
     Route route = Route(directory + "middleValueMinimum.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
 }
 
-//Last is minimum
+// Checks that the correct minimum value is returned
+// when the last value of the data set is the minimum value.
 BOOST_AUTO_TEST_CASE(lastValueMinimum)
 {
     Route route = Route(directory + "lastValueMinimum.gpx", isFileName);
     BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
 }
 
-/*
-//Multiple minimums
-BOOST_AUTO_TEST_CASE(multipleMinimums)
+// Checks that the correct value is returned
+// when there are two lowest values equal to each other
+// and different latitude values.
+BOOST_AUTO_TEST_CASE(twoMinimums)
 {
-    Route route = Route(directory + "multipleMinimums.gpx", isFileName);
-    BOOST_CHECK_EQUAL(route.minLongitude(), );
+    Route route = Route(directory + "twoMinimums.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
 }
-*/
+
+
+// Checks that the correct value is returned
+// when there are three lowest values equal to each other
+// and different latitude values.
+BOOST_AUTO_TEST_CASE(threeMinimums)
+{
+    Route route = Route(directory + "threeMinimums.gpx", isFileName);
+    BOOST_CHECK_EQUAL(route.minLongitude(), -1.097061038017273);
+}
+
 
 // Checks that the correct longitude value is returned
 // when the minimum value is an integer.
