@@ -7,12 +7,12 @@ using namespace GPS;
 
 BOOST_AUTO_TEST_SUITE(maxlongitudeN0795864)
 
-const bool isFileName = false;
-std::string directory = LogFiles::GPXRoutesDir + "/N0795864";
+const bool isFileName = true;
+std::string directory = LogFiles::GPXRoutesDir + "/N0795864/";
 //accepted tests
 BOOST_AUTO_TEST_CASE(NTU_longitude_data)
 {
-    Route route = Route(directory + "NTUSinglePos.gpx", isFileName);
+    Route route = Route(directory + "SinglePosNTU.gpx", isFileName);
     BOOST_CHECK_EQUAL( route.maxLongitude(), -1.04054 );
 }
 //boundaries
