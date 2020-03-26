@@ -17,6 +17,20 @@ BOOST_AUTO_TEST_CASE( longitude_SingleValue )
     BOOST_CHECK_EQUAL( route.minLongitude(), -1.118760108947754 );
 }
 
+// Checks that it correctly selects the right value when it is the first in the route
+BOOST_AUTO_TEST_CASE( longitude_MinIsFirst )
+{
+    Route route = Route( myDirectory + "longitudeMinFirst.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 109.142 );
+}
+
+// Checks that the last data point in the route is correctly extracted
+BOOST_AUTO_TEST_CASE( longitude_MinIsLast )
+{
+    Route route = Route( myDirectory + "longitudeMinLast.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 108.934 );
+}
+
 // Checks that it can correctly extract the minimum longitude from a small data set
 BOOST_AUTO_TEST_CASE( longitude_SmallActualFile )
 {
