@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_CASE( ignore_erroneous_min_longtitude )
 }
 
 //tests that it can return a 0 value when 0 is negative
-BOOST_AUTO_TEST_CASE( zero_min_longtitude )
+BOOST_AUTO_TEST_CASE( negative_zero_min_longtitude )
 {
     const std::string gpxData =
       "<gpx><rte><name>MyRoute</name><rtept lat=\"1.2\" lon=\"0\"></rtept><rtept lat=\"1.1\" lon=\"0\"></rtept><rtept lat=\"-0\" lon=\"0\"></rtept></rte></gpx>";
