@@ -10,6 +10,8 @@ const bool isFileName = false; // All GPX data in this suite is provided as stri
 
 metres defaultElevation = 0;
 
+BOOST_AUTO_TEST_SUITE (minElevation_n0796117)
+
 BOOST_AUTO_TEST_CASE( missing_elevation_element )
 {
     const std::string gpxData =
@@ -34,4 +36,5 @@ BOOST_AUTO_TEST_CASE( one_point )
    BOOST_CHECK_EQUAL( route.maxElevation(), -20000.000000);
 }
 
+BOOST_AUTO_TEST_SUITE_END()
 
