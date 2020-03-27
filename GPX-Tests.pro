@@ -47,6 +47,7 @@ SOURCES += \
     src/gpx-tests/maxlongitude_n0795864.cpp \
     src/gpx-tests/minLongitude-n0783935.cpp
 #    src/gpx-tests/minElevation-n0796117.cpp \
+    src/gpx-tests/totalLength-n0809433.cpp
 
 
 INCLUDEPATH += headers/  headers/xml/
