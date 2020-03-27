@@ -1,7 +1,5 @@
 #include <boost/test/unit_test.hpp>
 
-#define BOOST_TEST_MODULE minLongitude_N0786072
-
 #include "logs.h"
 #include "route.h"
 
@@ -9,29 +7,29 @@ using namespace GPS;
 
 BOOST_AUTO_TEST_SUITE( Route_minLongitude_N0786072 )
 
-/* Route.minLongitude() should return the minimum value for the longitude from a given Route,
- * which is taken from the content of the ' <rtept> lon="" ' element (within the <rte> element)
- * in the GPX data file that the Route was made from.
- *
- * The main point for testing is to ascertain if the function is able to correctly identify
- * the longitude values from the route, and then store and return which one is the smallest - or
- * the most Western point of data.
- *
- * The tests start by checking that the function works with a relatively small typical file
- * consisting of 15 points of real-world data.
- *
- * The tests then move onto using a full route using real-world data that consists of roughly
- * 1000 points of data.
- *
- * The next couple of tests are to check that it can handle differing types of data such as
- * the string making up an integer or a float, as well as how it handles extreme values
- * (within -180 and 180.)
- *
- * Finally the tests then check to see how the function handles repeated values.
-*/
-
 const bool isFileName = true; // All GPX data in this suite is provided as a file
 std::string myDirectory = LogFiles::GPXRoutesDir + "N0786072/";
+
+// Checks that it works even if only given a single value
+BOOST_AUTO_TEST_CASE( longitude_SingleValue )
+{
+    Route route = Route( myDirectory + "longitudeSingleValue.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), -1.118760108947754 );
+}
+
+// Checks that it correctly selects the right value when it is the first in the route
+BOOST_AUTO_TEST_CASE( longitude_MinIsFirst )
+{
+    Route route = Route( myDirectory + "longitudeMinFirst.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 109.142 );
+}
+
+// Checks that the last data point in the route is correctly extracted
+BOOST_AUTO_TEST_CASE( longitude_MinIsLast )
+{
+    Route route = Route( myDirectory + "longitudeMinLast.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 108.934 );
+}
 
 // Checks that it can correctly extract the minimum longitude from a small data set
 BOOST_AUTO_TEST_CASE( longitude_SmallActualFile )
@@ -87,6 +85,13 @@ BOOST_AUTO_TEST_CASE( longitude_NegZero )
 {
     Route route = Route( myDirectory + "longitudeNegZero.gpx", isFileName );
     BOOST_CHECK_EQUAL( route.minLongitude(), 0 );
+}
+
+// Checks that it can deal with numbers of very similar value
+BOOST_AUTO_TEST_CASE( longitude_SimilarValues )
+{
+    Route route = Route( myDirectory + "longitudeSimilarValues.gpx", isFileName );
+    BOOST_CHECK_EQUAL( route.minLongitude(), 108.999999 );
 }
 
 // Checks that it can handle repeated instances of the desired value
