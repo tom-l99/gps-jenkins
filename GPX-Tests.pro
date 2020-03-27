@@ -45,8 +45,8 @@ SOURCES += \
     src/gpx-tests/totalheightgain_n0800619.cpp \
     src/gpx-tests/minlatitude-n0786956.cpp \
     src/gpx-tests/maxlongitude_n0795864.cpp \
-    src/gpx-tests/minLongitude-n0783935.cpp
-#    src/gpx-tests/minElevation-n0796117.cpp \
+    src/gpx-tests/minLongitude-n0783935.cpp \
+    src/gpx-tests/minElevation-n0796117.cpp \
     src/gpx-tests/totalLength-n0809433.cpp
 
 
