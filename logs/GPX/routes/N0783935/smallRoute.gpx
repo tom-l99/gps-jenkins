@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<gpx version="1.1"
+     creator="myTracks"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:mytracks="http://mytracks.stichling.info/myTracksGPX/1/0"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<rte>
+<rtept lat="54.41450536251068" lon="-1.101304292678833"><ele>422</ele></rtept>
+<rtept lat="54.41439807415009" lon="-1.100896596908569"><ele>414</ele></rtept>
+<rtept lat="54.41425859928131" lon="-1.100698113441467"><ele>424</ele></rtept>
+<rtept lat="54.41406548023224" lon="-1.100547909736633"><ele>421</ele></rtept>
+<rtept lat="54.41398501396177" lon="-1.100327968597412"><ele>425</ele></rtept>
+<rtept lat="54.41384553909302" lon="-1.100070476531982"><ele>430</ele></rtept>
+<rtept lat="54.41375434398651" lon="-1.099850535392761"><ele>429</ele></rtept>
+<rtept lat="54.4136309623718" lon="-1.099668145179749"><ele>438</ele></rtept>
+<rtept lat="54.41347002983091" lon="-1.099539399147034"><ele>435</ele></rtept>
+<rtept lat="54.4133734703064" lon="-1.099453568458558"><ele>437</ele></rtept>
+<rtept lat="54.4132339954376" lon="-1.099292635917664"><ele>440</ele></rtept>
+</rte>
+</gpx>
+

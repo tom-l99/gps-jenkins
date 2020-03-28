@@ -11,12 +11,8 @@ using namespace GPS;
 int main()
 {
     std::string exampleRouteString = "ABC";
-
     assert( GridWorldRoute::isValidRouteString(exampleRouteString) );
-
     GridWorldRoute exampleGWroute(exampleRouteString);
-
     std::cout << exampleGWroute.toGPX() << std::endl;
-
     return 0;
 }

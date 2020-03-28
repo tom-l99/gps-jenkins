@@ -1,4 +1,3 @@
-
 TEMPLATE = app
 CONFIG += console c++11
 CONFIG -= app_bundle
@@ -15,13 +14,13 @@ HEADERS += \
     headers/track.h \
     headers/types.h \
     headers/xml/parser.h \
-    headers/xml/element.h \
-#    src/gpx-tests/maxlongitude_n0799202.h
+    headers/xml/element.h
 
 SOURCES += \
     src/earth.cpp \
     src/gpx-tests.cpp \
     src/geometry.cpp \
+#   src/gpx-tests/minLongitude-N0784536.cpp \
     src/logs.cpp \
     src/position.cpp \
     src/route.cpp \
@@ -30,11 +29,34 @@ SOURCES += \
     src/xml/parser.cpp \
     src/gpx-tests/name.cpp \
     src/gpx-tests/numpositions.cpp \
-#    src/gpx-tests/maxlongitude_n0799202.cpp \
-    src/gpx-tests/totalheightgain_t0117358.cpp
+#   src/gpx-tests/minlatitude-n0806708.cpp\
+#   src/gpx-tests/maxLongitude-n0804090.cpp \
+#   src/gpx-tests/minLongitude-N0786072.cpp \
+#   src/gpx-tests/travellingTime-N0800790.cpp \ Commented out to allow build, as per Neil's request
+#   src/gpx-tests/maxElevation-n0792395.cpp \
+#   src/gpx-tests/minElevation-n0806748.cpp \
+#   src/gpx-tests/maxlongitude-n0799125.cpp \ Commented out to allow build, as per Neil's request
+#   src/gpx-tests/maxlatitude-n0798917.cpp \
+#   src/gpx-tests/totalLength-n0786783.cpp  \
+#   src/gpx-tests/maxElevation-N0792831.cpp \
+#   src/gpx-tests/travellingTime-N0800790.cpp \ Commented out to allow build, as per Neil's request
+#   src/gpx-tests/maxElevation-n0809215.cpp \
+#   src/gpx-tests/minLongitude-n0782914.cpp \
+#   src/gpx-tests/totalheightgain_n0800619.cpp \
+#   src/gpx-tests/minlatitude-n0786956.cpp \
+ #  src/gpx-tests/maxlongitude_n0795864.cpp \
+#   src/gpx-tests/minLongitude-n0783935.cpp \
+#   src/gpx-tests/minElevation-n0796117.cpp \
+#   src/gpx-tests/totalLength-n0809433.cpp \
+    src/gpx-tests/minElevation-N0779393.cpp 
 
 INCLUDEPATH += headers/  headers/xml/
 
 TARGET = $$_PRO_FILE_PWD_/execs/gpx-tests
 
 LIBS += -lboost_unit_test_framework
+
+macx{
+INCLUDEPATH += "/usr/local/Cellar/boost/1.72.0/include"
+LIBS += -L"/usr/local/Cellar/boost/1.72.0/lib"
+}
